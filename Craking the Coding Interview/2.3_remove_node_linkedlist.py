@@ -7,17 +7,19 @@ class Node:
         self.val = item
         self.next = None
 
-
+# Class to handle the linked list options
 class LinkedList:
     def __init__(self, item):
         self.head = Node(item)
 
+    # Adds a value to the linked list 
     def add(self, item):
         cur = self.head
         while cur.next is not None:
             cur = cur.next
         cur.next = Node(item)
 
+    # removes a value from teh linked list
     def remove_item(self, item):
         cur = self.head
         while cur.next is not None:
